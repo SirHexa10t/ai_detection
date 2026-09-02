@@ -5,6 +5,9 @@
 //!   watermarks, and the same ones pasted in by accident that then break diffs, greps and search.
 //! - [`metadata`] — *provenance labels* in file metadata: frontmatter and `<meta>` generator
 //!   fields, XMP CreatorTool, C2PA containers, vendor names.
+//! - [`tells`] — *writing habits*: excess vocabulary, stock phrases, sentence shapes, formatting
+//!   tics, assistant register, leakage. The weakest of the three by design — read its module doc
+//!   before using its output for anything.
 //!
 //! # What this crate is, and is not
 //!
@@ -24,3 +27,4 @@
 
 pub mod hidden;
 pub mod metadata;
+pub mod tells;
