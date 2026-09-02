@@ -1,0 +1,18 @@
+# Detecting AI-generated content by what it verifiably leaves behind in a file: hidden
+# characters carrying edit-based text watermarks, and AI provenance labels in metadata. The
+# engines only — no walking, no policy, no styling — so a consumer supplies its own command
+# surface. A library meant to be picked out into its own repo so other projects can run the
+# same detection.
+[package]
+name = "ai_detection"
+version = "0.1.0"
+edition = "2021"
+description = "Detect verifiable traces of AI-generated content: hidden watermark characters in text, and AI provenance markers in file metadata"
+license = "GPL-3.0-only"
+
+[dependencies]
+regex = "1"   # the boundary-guarded `ai` token match in metadata values; nothing else needs one
+
+# Its own workspace root: an independent repo that consumers keep beside them as a path
+# dependency during iteration, so it must build exactly as it will once fetched from git.
+[workspace]
